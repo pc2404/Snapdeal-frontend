@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Box } from "@mui/material";
 
-function App() {
+import Payment from "./components/Payment";
+import Navbar from "./components/Navbar";
+import ProductDetail from "./components/products/ProductDetail";
+import Home from "./components/home/Home";
+import Products from "./components/products/Products";
+import CartPage from "./components/cart/CartPage";
+import { Toaster } from "react-hot-toast";
+import LoginPage from "./components/LoginPage";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ backgroundColor: "#F7F7F7" }}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <Toaster />
+      </BrowserRouter>
+    </Box>
   );
-}
+};
 
 export default App;

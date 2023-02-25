@@ -1,0 +1,38 @@
+{/* <TableRow key={cartProd.id}>
+                <TableCell>
+                  <Card sx={{ maxWidth: 700 }}>
+                    <Stack direction="row">
+                      <CardMedia
+                        sx={{ height: 90, width: 90 }}
+                        image={cartProd.thumbnail}
+                        title={cartProd.title}
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          {cartProd.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {cartProd.description.slice(0, 60)}
+                        </Typography>
+                      </CardContent>
+                    </Stack>
+                  </Card>
+                </TableCell>
+                <TableCell align="right">{`${cartProd.price} Rs.`}</TableCell>
+                <TableCell align="right">
+                  <Button
+                    endIcon={<AddCircleOutline />}
+                    onClick={() => setCount((prev) => prev + 1)}
+                    sx={{ color: "#E40144" }}
+                  ></Button>
+                  <Button>{count}</Button>
+                  <Button
+                    endIcon={<RemoveCircleOutline />}
+                    onClick={() =>
+                      setCount((prev) => (prev === 0 ? 0 : prev - 1))
+                    }
+                    sx={{ color: "#E40144" }}
+                  ></Button>
+                </TableCell>
+                <TableCell align="right">{ccyFormat(count*cartProd.price)}</TableCell>
+              </TableRow> */}
